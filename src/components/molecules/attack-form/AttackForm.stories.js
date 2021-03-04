@@ -16,15 +16,15 @@ export const Primary = Template.bind({});
 Primary.args = {
   /* 👇 The args you need here will depend on your component */
   targetOptions: [
-    { displayName: 'test', value: 'test' },
-    { displayName: 'test', value: 'test' },
-    { displayName: 'test', value: 'test' },
-    { displayName: 'test', value: 'test' },
+    { label: 'test', value: 'test' },
+    { label: 'test', value: 'test' },
+    { label: 'test', value: 'test' },
+    { label: 'test', value: 'test' },
   ],
   categoryOptions: [
-    { displayName: 'test', value: 'test' },
-    { displayName: 'test', value: 'test' },
-    { displayName: 'test', value: 'test' },
-    { displayName: 'test', value: 'test' },
+    { label: 'test', value: 'test' },
+    { label: 'test', value: 'test' },
+    { label: 'test', value: 'test' },
+    { label: 'test', value: 'test' },
   ],
 };
