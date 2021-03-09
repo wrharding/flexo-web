@@ -1,10 +1,9 @@
 import React from 'react';
-import HomePage from './components/pages/home-page/HomePage';
-
+import Auth from './components/pages/auth/Auth';
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Auth />
     </div>
   );
 }

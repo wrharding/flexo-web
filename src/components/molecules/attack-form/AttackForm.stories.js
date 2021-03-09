@@ -16,15 +16,23 @@ export const Primary = Template.bind({});
 Primary.args = {
   /* 👇 The args you need here will depend on your component */
   targetOptions: [
-    { label: 'test', value: 'test' },
-    { label: 'test', value: 'test' },
-    { label: 'test', value: 'test' },
-    { label: 'test', value: 'test' },
+    { label: 'target', value: 'target' },
+    { label: 'target', value: 'target' },
+    { label: 'target', value: 'target' },
+    { label: 'target', value: 'target' },
   ],
   categoryOptions: [
-    { label: 'test', value: 'test' },
-    { label: 'test', value: 'test' },
-    { label: 'test', value: 'test' },
-    { label: 'test', value: 'test' },
+    { label: 'category', value: 'category' },
+    { label: 'category', value: 'category' },
+    { label: 'category', value: 'category' },
+    { label: 'category', value: 'category' },
+  ], teamOptions: [
+    { label: 'team', value: 'team' },
+    { label: 'team', value: 'team' },
+    { label: 'team', value: 'team' },
+    { label: 'team', value: 'team' },
   ],
+    handleSubmit: (data) => {
+      console.log("HandleSubmit triggered :", data)
+    }
 };
