@@ -1,5 +1,5 @@
 export const fetchData = (path, options) => {
-  return fetch(`${process.env.BACKEND_URL}/${path}`, options)
+  return fetch(`https://scoreboard.fraq.io/${path}`, options)
     .then((response) => response.json())
     .then((data) => {
       if (Array.isArray(data)) {
@@ -12,10 +12,9 @@ export const fetchData = (path, options) => {
 };
 
 export const postData = async (path, options) => {
-  return await fetch(`${process.env.BACKEND_URL}/${path}`, options)
+  return await fetch(`https://scoreboard.fraq.io/${path}`, options)
     .then((response) => response.json())
     .then((data) => {
-      console.log('Post res: ', data);
       return data;
     });
 };
