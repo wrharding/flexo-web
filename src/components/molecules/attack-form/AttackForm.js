@@ -6,6 +6,7 @@ import TextBox from '../../atoms/text-box/TextBox';
 
 // eslint-disable-next-line react/prop-types
 const AttackForm = ({ targetOptions, categoryOptions, teamOptions, handleSubmit }) => {
+  console.log('TeamOptions: ', teamOptions);
   const [formData, setFormData] = useState({
     teams: null,
     targets: null,
@@ -20,8 +21,6 @@ const AttackForm = ({ targetOptions, categoryOptions, teamOptions, handleSubmit 
     e.preventDefault();
     handleSubmit(formData);
   };
-
-
 
   return (
     <form className={styles.form}>

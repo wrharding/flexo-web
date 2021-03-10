@@ -4,7 +4,7 @@ export const fetchData = (path, options) => {
     .then((data) => {
       if (Array.isArray(data)) {
         return data.map((item) => {
-          return { value: item.ID, label: item.Name };
+          return { value: item.team_id, label: item.abbrev };
         });
       }
     });
