@@ -56,6 +56,5 @@
       "pre-commit": "pretty-quick --staged",
       "pre-push": "yarn test:local"
     }
-  },
-  "proxy": "http://localhost:8080"
+  }
 }
