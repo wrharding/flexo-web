@@ -7,7 +7,6 @@ export const fetchData = (path, options) => {
           return { value: item.ID, label: item.Name };
         });
       }
-      return data;
     });
 };
 
