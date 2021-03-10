@@ -1,5 +1,5 @@
 export const fetchData = (path, options) => {
-  return fetch(`https://scoreboard.fraq.io/${path}`, options)
+  return fetch(`https://scoreboard-api.fraq.io/${path}`, options)
     .then((response) => response.json())
     .then((data) => {
       if (Array.isArray(data)) {
