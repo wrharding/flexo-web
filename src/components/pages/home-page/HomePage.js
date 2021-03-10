@@ -21,14 +21,24 @@ const HomePage = ({ secret }) => {
       const categories = await fetchData('categories', getOptions);
       const targets = await fetchData('targets', getOptions);
       const events = await fetchData('events', getOptions);
-      teams && setTeamOptions(teams);
-      categories && setCategoryOptions(categories);
-      targets && setTargetOptions(targets);
+      teams && setTeamOptions(processTeams(teams));
+      categories && setCategoryOptions(processData(categories));
+      targets && setTargetOptions(processData(targets));
       events && setEvents(events);
     };
     asyncFetch();
   }, []);
 
+  const processTeams = (data) => {
+    return data.map((item) => {
+      return { value: item.team_id, label: item.abbrev };
+    });
+  };
+  const processData = (data) => {
+    return data.map((item) => {
+      return { value: item.ID, label: item.Name };
+    });
+  };
   const convertToObjectLiteral = (object) => {
     const str = JSON.stringify(object);
     return str.slice(0, str.length);
