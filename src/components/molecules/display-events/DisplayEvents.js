@@ -8,7 +8,6 @@ const DisplayEvents = ({ events }) => {
 };
 
 DisplayEvents.defaultProps = {};
-
 DisplayEvents.propTypes = { events: PropTypes.arrayOf(PropTypes.object).isRequired };
 
 export default DisplayEvents;
