@@ -34,7 +34,7 @@ jobs:
           file: ./Dockerfile
           push: true
           build-args: |
-            REACT_APP_DOMAIN=https://scoreboard-api.fraq.io
+            BACKEND_URL=https://scoreboard-api.fraq.io
           tags: |
             ghcr.io/seccdc/flexo-web:latest
             ghcr.io/seccdc/flexo-web:${{ steps.get_version.outputs.VERSION }}
