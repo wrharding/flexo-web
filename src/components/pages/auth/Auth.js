@@ -11,8 +11,7 @@ const Auth = () => {
   useEffect(() => {
     const asyncSecretDecryption = async () => {
       const sessionSecret = await window.sessionStorage.getItem('ccdc-auth');
-
-      console.log(sessionSecret);
+      console.log('Sessionsecret: ', sessionSecret.value);
       console.log('DecryptedSessionSecret: ', encryptor.decrypt(sessionSecret));
       sessionSecret && setSecret(encryptor.decrypt(sessionSecret));
     };

@@ -21,8 +21,6 @@ const AttackForm = ({ targetOptions, categoryOptions, teamOptions, handleSubmit 
     handleSubmit(formData);
   };
 
-
-
   return (
     <form className={styles.form}>
       <label>
