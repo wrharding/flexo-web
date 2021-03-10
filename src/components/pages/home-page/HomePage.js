@@ -24,8 +24,7 @@ const HomePage = ({ secret }) => {
       teams && setTeamOptions(teams);
       categories && setCategoryOptions(categories);
       targets && setTargetOptions(targets);
-      events && console.log('Events: ', events);
-      setEvents(events);
+      events && setEvents(events);
     };
     asyncFetch();
   }, []);

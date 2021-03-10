@@ -17,7 +17,6 @@ const Dropdown = ({ name, options, handleInputChange, multiple }) => {
         value: processedArr,
       });
     } else {
-      console.log('Category: ', parseInt(value.value));
       handleInputChange({ name: name, value: value.value });
     }
   };
