@@ -5,13 +5,15 @@ import Dropdown from '../../atoms/dropdown/Dropdown';
 import TextBox from '../../atoms/text-box/TextBox';
 
 // eslint-disable-next-line react/prop-types
+const initialState = {
+  teams: null,
+  targets: null,
+  category: null,
+  description: '',
+};
+
 const AttackForm = ({ targetOptions, categoryOptions, teamOptions, handleSubmit }) => {
-  const [formData, setFormData] = useState({
-    teams: null,
-    targets: null,
-    category: null,
-    description: '',
-  });
+  const [formData, setFormData] = useState(initialState);
 
   const handleInputChange = (value) => {
     setFormData({ ...formData, [value.name]: value.value });

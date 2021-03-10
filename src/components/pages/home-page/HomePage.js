@@ -47,7 +47,7 @@ const HomePage = ({ secret }) => {
   const handleSubmit = (data) => {
     const asyncPost = async () => {
       const objectLiteral = await convertToObjectLiteral(data);
-      await postData('event', {
+      const postRes = await postData('event', {
         method: 'POST',
         body: objectLiteral,
         headers: {
@@ -56,6 +56,12 @@ const HomePage = ({ secret }) => {
         'cache-control': 'no-store',
         pragma: 'no-cache',
       });
+      if (postRes.status === 200) {
+        alert('Form has been submitted successfully');
+      }
+      if (postRes.status !== 200) {
+        alert('Form did not submit');
+      }
     };
     asyncPost();
   };
