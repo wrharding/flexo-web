@@ -17,10 +17,10 @@ const HomePage = ({ secret }) => {
           Authorization: `Bearer ${secret}`,
         },
       };
-      const teams = await fetchData('teams', getOptions);
-      const categories = await fetchData('categories', getOptions);
-      const targets = await fetchData('targets', getOptions);
-      const events = await fetchData('events', getOptions);
+      const teams = await teamData('teams', getOptions);
+      const categories = await categoryData('categories', getOptions);
+      const targets = await targetsData('targets', getOptions);
+      const events = await eventData('events', getOptions);
       teams && setTeamOptions(teams);
       categories && setCategoryOptions(categories);
       targets && setTargetOptions(targets);
