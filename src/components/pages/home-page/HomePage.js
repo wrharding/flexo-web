@@ -39,21 +39,19 @@ const HomePage = ({ secret }) => {
       return { value: item.ID, label: item.Name };
     });
   };
-  const convertToObjectLiteral = (object) => {
-    const str = JSON.stringify(object);
+  const convertToObjectLiteral = async (object) => {
+    const str = await JSON.stringify(object);
     return str.slice(0, str.length);
   };
 
   const handleSubmit = (data) => {
     const asyncPost = async () => {
-      const auth = data.auth;
-      delete data.auth;
       const objectLiteral = await convertToObjectLiteral(data);
       await postData('event', {
         method: 'POST',
         body: objectLiteral,
         headers: {
-          Bearer: auth,
+          Authorization: `Bearer ${secret}`,
         },
         'cache-control': 'no-store',
         pragma: 'no-cache',
