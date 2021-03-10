@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './DisplayEvents.module.scss';
 
 const DisplayEvents = ({ events }) => {
-  console.log(events);
   return <section className={styles.container}>DisplayEvents</section>;
 };
 

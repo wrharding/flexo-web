@@ -11,7 +11,8 @@
     "react-scripts": "4.0.3",
     "react-select": "^4.1.0",
     "sass": "^1.32.8",
-    "serve": "^11.2.0"
+    "serve": "^11.2.0",
+    "simple-encryptor": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
